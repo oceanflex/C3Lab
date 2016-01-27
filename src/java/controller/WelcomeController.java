@@ -14,7 +14,7 @@ import model.WelcomeService;
  *
  * @author Zachary
  */
-@WebServlet(name = "WelcomeController", urlPatterns = {"/Welcomed"})
+@WebServlet(name = "WelcomeController", urlPatterns = {"/WelcomeController"})
 public class WelcomeController extends HttpServlet {
 
     /**
