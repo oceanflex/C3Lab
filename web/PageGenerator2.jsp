@@ -18,7 +18,7 @@
                     out.println("<tr>");
                     for(int j = 0;j<3;j++){
                         out.println("<td>");
-                        out.println(i+j);
+                        out.println(i+j+"!");
                         out.println("</td>");
                     }
                     out.println("</tr>");
