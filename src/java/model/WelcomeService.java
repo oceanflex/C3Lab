@@ -8,8 +8,10 @@ import java.time.LocalDateTime;
  */
 public class WelcomeService {
     public String sliceOfDay(){
-        return "h";
+        LocalDateTime ldt = LocalDateTime.now();
+        return sliceOfDay(ldt);
     }
+    
     public String sliceOfDay(LocalDateTime ldt){
         int hour = ldt.getHour();
         String sliceWord = null;
@@ -23,5 +25,10 @@ public class WelcomeService {
             sliceWord = "evening";
         }
         return sliceWord;
+    }
+    
+    public String greatName(String name){
+        String back = "Good "+this.sliceOfDay()+", "+name+"!";
+        return back;
     }
 }
