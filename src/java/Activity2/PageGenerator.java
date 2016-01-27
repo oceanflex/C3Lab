@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Zachary
  */
-@WebServlet(name = "PageGenerator", urlPatterns = {"/PageGenerator"})
+@WebServlet(name = "PageGenerator", urlPatterns = {"/pager"})
 public class PageGenerator extends HttpServlet {
 
     /**
@@ -35,7 +35,17 @@ public class PageGenerator extends HttpServlet {
             out.println("<title>Servlet PageGenerator</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet PageGenerator at " + request.getContextPath() + "</h1>");
+            out.println("<table>");
+            for(int i = 0;i<3;i++){
+                out.println("<tr>");
+                for(int j = 0;j<3;j++){
+                    out.println("<td>");
+                    out.println(i+j);
+                    out.println("</td>");
+                }
+                out.println("</tr>");
+            }
+            out.println("</table>");
             out.println("</body>");
             out.println("</html>");
         }
