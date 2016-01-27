@@ -15,14 +15,16 @@ public class WelcomeService {
     public String sliceOfDay(LocalDateTime ldt){
         int hour = ldt.getHour();
         String sliceWord = null;
-        if(hour < 5){
-            sliceWord = "night";
-        }else if(hour < 11){
+        if(hour < 6){
+            sliceWord = "early morning";
+        }else if(hour < 12){
             sliceWord = "morning";
-        }else if(hour < 17){
+        }else if(hour < 18){
             sliceWord = "afternoon";
         }else if(hour < 24){
             sliceWord = "evening";
+        }else{
+            sliceWord = "error";
         }
         return sliceWord;
     }
