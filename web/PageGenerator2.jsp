@@ -15,14 +15,14 @@
         <table>
             <%
                 for(int i = 0;i<3;i++){
-                out.println("<tr>");
-                for(int j = 0;j<3;j++){
-                    out.println("<td>");
-                    out.println(i+j);
-                    out.println("</td>");
+                    out.println("<tr>");
+                    for(int j = 0;j<3;j++){
+                        out.println("<td>");
+                        out.println(i+j);
+                        out.println("</td>");
+                    }
+                    out.println("</tr>");
                 }
-                out.println("</tr>");
-            }
             %>
         </table>
     </body>
